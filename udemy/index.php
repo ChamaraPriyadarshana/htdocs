@@ -1,7 +1,3 @@
-<?php
-    //echo "Hello PHP";
-    //phpinfo();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php 
+        $name="Chamara"; 
+        echo $name;
+    ?>
 </body>
 </html>
