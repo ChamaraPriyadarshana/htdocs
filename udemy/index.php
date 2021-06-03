@@ -44,5 +44,90 @@
     
         Repeat: <?php echo str_repeat($fullname,3); ?> <br>
     </p>
+    <hr>
+    <p>
+        <?php 
+            $decimalnumber=3.1428;
+            echo $decimalnumber/0.5;
+        ?> <br>
+    </p>
+    <p> <!--Constants-->
+        <?php
+            define("value_of_pi",3.14);
+
+            echo "value_of_pi = ".(2 * value_of_pi * 7);
+        ?>
+    </p><br>
+    <p>
+        <?php
+            $firstnumber=3;
+            $secondnumber=7;
+            $thirdnumber=3.6789;
+            echo $thirdnumber/$secondnumber."<br>";
+
+            echo "is {$firstnumber} : integer " . is_int($firstnumber) . "<br>";
+            echo "is {$secondnumber} : integer " . is_int($secondnumber) . "<br>";
+            echo "is {$thirdnumber} : float " . is_float($thirdnumber) . "<br>";
+            echo "Decimal to Binary " . decbin($secondnumber) . "<br>";
+            echo "Binary to Decimal " . bindec(11) . "<br>";
+            echo "Squareroot " . sqrt(25) . "<br>";
+            echo "Abs " . abs(-15+11) . "<br>";
+            echo "Power " . pow(11,2) . "<br>";
+            echo "Modulus " . fmod(11,3) . "<br>";
+            echo "Random " . rand(10,100) . "<br>";
+
+            for ($i=0; $i < 5; $i++) { 
+                echo "Binary to Decimal " . pow($i,$i) . "<br>";
+            }
+        ?>
+    </p>
+    <p>
+        <!--arrays-->
+        <?php 
+            $namearray = array('Chamara','malan','sadun');
+            echo $namearray[1] . "<br> <br>";
+
+            $student = array(array("chamara","priyadarshana","ekanayake"),array("Senan waththa","Kaikole","Polgahawela"),"BSc.IT");
+
+            echo " Firstname: " . $student[0][0] . "<br>";
+            echo " LastName: " . $student[0][2] . "<br>";
+            echo " Address: " . $student[1][1] . ", " . $student[1][2] . "<br>";
+            echo " Course: " . $student[2] . "<br>";
+            echo "<pre>";
+                echo print_r($student) . "<br>";
+            echo "</pre>";
+            echo "<br>"; 
+        ?>
+    </p>
+    <p>
+    <!--associative array-->
+        <?php
+            $users = array("name"=>"Chamara","username"=>"cha123","password"=>"abc123");
+            echo " ". $users["name"] . "<br>";
+            echo " ". $users["username"] . "<br>";
+
+            $colors = array("red","green","blue");
+
+            echo "<pre>";
+                print_r($colors);
+            echo "</pre>";
+
+            array_pop($colors);
+            array_pop($colors);
+            array_pop($colors);
+
+            array_push($colors,"purple","teal","cyan");
+
+            echo "<pre>";
+                print_r($colors);
+            echo "</pre>";
+        ?>
+    </p>
+    <br>
+    <p>
+        <?php
+            echo "How many items inside the array : " . count($colors) . "<br>";
+        ?>
+    </p>      
 </body>
 </html>
